@@ -1,0 +1,68 @@
+<ECF>
+    <Encabezado>
+        <Version>1.0</Version>
+        <IdDoc>
+            <TipoeCF>46</TipoeCF>
+            <eNCF>E460000000001</eNCF>
+            <FechaVencimientoSecuencia>31-12-2025</FechaVencimientoSecuencia>
+            <TipoIngresos>01</TipoIngresos>
+            <TipoPago>2</TipoPago>
+            <FechaLimitePago>06-05-2020</FechaLimitePago>
+            <TerminoPago>1 mes</TerminoPago>
+            <TablaFormasPago>
+                <FormaDePago>
+                    <FormaPago>2</FormaPago>
+                    <MontoPago>1800000.00</MontoPago>
+                </FormaDePago>
+            </TablaFormasPago>
+        </IdDoc>
+        <Emisor>
+            <RNCEmisor>132347986</RNCEmisor>
+            <RazonSocialEmisor>DOCUMENTOS ELECTRONICOS DE 02</RazonSocialEmisor>
+            <NombreComercial>DOCUMENTOS ELECTRONICOS DE 02</NombreComercial>
+            <DireccionEmisor>AVE. ISABEL AGUIAR NO. 269, ZONA INDUSTRIAL DE HERRERA</DireccionEmisor>
+            <FechaEmision>01-04-2020</FechaEmision>
+        </Emisor>
+        <Comprador>
+            <RNCComprador>131880681</RNCComprador>
+            <RazonSocialComprador>ZONA FRANCA LOI</RazonSocialComprador>
+            <ContactoComprador>MARCOS LLUBERES</ContactoComprador>
+            <CorreoComprador>MARCOSLLUBERES@KKKK.COM</CorreoComprador>
+            <DireccionComprador>ZONA HAINA</DireccionComprador>
+            <MunicipioComprador>010100</MunicipioComprador>
+            <ProvinciaComprador>010000</ProvinciaComprador>
+            <FechaEntrega>07-04-2020</FechaEntrega>
+            <ContactoEntrega>JACINTO MANON</ContactoEntrega>
+            <DireccionEntrega>ZONA HAINA</DireccionEntrega>
+            <TelefonoAdicional>809-555-5050</TelefonoAdicional>
+            <FechaOrdenCompra>10-03-2020</FechaOrdenCompra>
+            <NumeroOrdenCompra>4500352230</NumeroOrdenCompra>
+        </Comprador>
+        <Totales>
+            <MontoGravadoTotal>1800000.00</MontoGravadoTotal>
+            <MontoGravadoI3>1800000.00</MontoGravadoI3>
+            <ITBIS3>0</ITBIS3>
+            <TotalITBIS>0.00</TotalITBIS>
+            <TotalITBIS3>0.00</TotalITBIS3>
+            <MontoTotal>1800000.00</MontoTotal>
+        </Totales>
+    </Encabezado>
+    <DetallesItems>
+        <Item>
+            <NumeroLinea>1</NumeroLinea>
+            <TablaCodigosItem>
+                <CodigosItem>
+                    <TipoCodigo>INTERNA</TipoCodigo>
+                    <CodigoItem>123456</CodigoItem>
+                </CodigosItem>
+            </TablaCodigosItem>
+            <IndicadorFacturacion>3</IndicadorFacturacion>
+            <NombreItem>AGUACATE CRIOLLO</NombreItem>
+            <IndicadorBienoServicio>1</IndicadorBienoServicio>
+            <CantidadItem>100.00</CantidadItem>
+            <UnidadMedida>43</UnidadMedida>
+            <PrecioUnitarioItem>18000.00</PrecioUnitarioItem>
+            <MontoItem>1800000.00</MontoItem>
+        </Item>
+    </DetallesItems>
+</ECF>
