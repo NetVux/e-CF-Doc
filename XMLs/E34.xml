@@ -13,7 +13,7 @@
             <RazonSocialEmisor>DOCUMENTOS ELECTRONICOS DE 02</RazonSocialEmisor>
             <NombreComercial>DOCUMENTOS ELECTRONICOS DE 02</NombreComercial>
             <DireccionEmisor>AVE. ISABEL AGUIAR NO. 269, ZONA INDUSTRIAL DE HERRERA</DireccionEmisor>
-            <FechaEmision>02-04-2020</FechaEmision>
+            <FechaEmision>27-01-2024</FechaEmision>
         </Emisor>
         <Comprador>
             <RNCComprador>131880681</RNCComprador>
@@ -39,9 +39,9 @@
         </Item>
     </DetallesItems>
     <InformacionReferencia>
-        <NCFModificado>E310000000001</NCFModificado>
+        <NCFModificado>E310000000230</NCFModificado>
         <FechaNCFModificado>01-04-2020</FechaNCFModificado>
-        <CodigoModificacion>2</CodigoModificacion>
+        <CodigoModificacion>1</CodigoModificacion>
         <RazonModificacion>Error en datos</RazonModificacion>
     </InformacionReferencia>
 </ECF>
