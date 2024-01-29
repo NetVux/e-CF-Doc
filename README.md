@@ -113,3 +113,7 @@ response = requests.post(api_url, headers=headers_semilla)
 ]
 }
 ```
+### Reference
+
+- [Documentación sobre e-CF
+](https://dgii.gov.do/cicloContribuyente/facturacion/comprobantesFiscalesElectronicosE-CF/Paginas/documentacionSobreE-CF.aspx)
