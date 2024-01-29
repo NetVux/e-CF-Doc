@@ -4,8 +4,9 @@
 Un ambiente es un contexto o entorno creado con la finalidad de definir el curso y
 funcionamiento de determinados servicios en cada uno de ellos, en NETVUX se estarán utilizando dos (2) ambientes:
 
-- Pre-certificación:
-- Producción:
+- Pre-certificación: publica los servicios a efectos de que los contribuyentes
+puedan practicar y realizar pruebas de adecuación e integración de sus sistemas, almacenando los envíos por un periodo de 60 días. No tiene validez fiscal.
+- Producción: ambiente productivo donde todo envío y operación tiene validez fiscal.
 
 ## Endpoints:
 
