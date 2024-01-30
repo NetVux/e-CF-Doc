@@ -90,7 +90,6 @@ headers_semilla = {
 }
 
 api_url = 'server_demo/TesteCF/api/TrackId?TrackId=872537f2-14b4-4e19-9998-e5c0c45e70ae'
-
 response = requests.post(api_url, headers=headers_semilla)
 
 ```
