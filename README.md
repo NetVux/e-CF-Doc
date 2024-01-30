@@ -10,7 +10,7 @@ puedan practicar y realizar pruebas de adecuación e integración de sus sistema
 
 ## Endpoints:
 
-**ValidarSemilla**: Esta ruta recibe un nombre de usuario y una clave (encriptado en HS256) que identifican al usuario en NETVUX.
+**Autenticación**: Esta ruta recibe un nombre de usuario y una clave (encriptado en HS256) que identifican al usuario en NETVUX.
 Si la información de usuario es correcta retorna un token de acceso asociado a una fecha de emisión y una fecha de expiración(5 minutos).
 Este token es necesario enviarlo en lo adelante para realizar cualquier comunicacion con NETVUX.
 
@@ -18,7 +18,7 @@ Este token es necesario enviarlo en lo adelante para realizar cualquier comunica
 
 ```python
 import requests
-url_val_semilla = "https://server_demo/TesteCF/api/ValidarSemilla"
+url_val_semilla = "https://server_demo/TesteCF/api/Autenticacion"
 
 headers_semilla = {
     'Authorization': 'Bearer {}'.format("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.njLWdDtB-uEBaz5iMqTYtGJ5iBfvkWOKKrEERAr1nwY"),
@@ -38,7 +38,7 @@ Retorna un objeto que contiene un string de autenticación (token) asociado a un
 ```
 
 **Recepcion ECF**: Esta ruta recibe un token de acceso asociado a una
-sesión válida y un xml con la estructura de la DGII.
+sesión válida y un xml simplificado con la estructura de la DGII.
 Si el token es valido retorna un XML de la siguente forma.
 
 <h4>Example</h4>
@@ -71,8 +71,30 @@ Mensajes: {"Mensaje": {"Valor": null, "Codigo": "0"}}</message_detail_dgii>
     <estado>delivered_accepted</estado>
     <security_code>aHRGQk</security_code>
     <sign_date>17-01-2024 15:09:37</sign_date>    
+    <trackId>872537f2-14b4-4e19-9998-e5c0c45e70ae</trackId>
 </MensajeEnviado>
 ```
+
+**Consulta XML**: Esta ruta recibe un token de acceso asociado a una
+sesión válida y una trackId. Retorna un xml firmado
+y con la estructura completa de la DGII.
+
+<h4>Example</h4>
+
+```python
+import requests
+
+headers_semilla = {
+    "accept": 'application/json',
+    'Authorization': 'Bearer 03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156',
+}
+
+api_url = 'server_demo/TesteCF/api/TrackId?TrackId=872537f2-14b4-4e19-9998-e5c0c45e70ae'
+
+response = requests.post(api_url, headers=headers_semilla)
+
+```
+
 **Consulta Estado ECF**: Esta ruta recibe responsable de retornar el estado de procesamiento o validez del e‐CF
 tentativo enviado exclusivamente mediante el servicio web de recepción de e‐CF.
 
