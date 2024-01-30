@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ECF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Encabezado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Version" type="xs:string"/>
+              <xs:element name="IdDoc">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TipoeCF" type="xs:string"/>
+                    <xs:element name="TipoIngresos" type="xs:string"/>
+                    <xs:element name="TipoPago" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Emisor">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RNCEmisor" type="xs:string"/>
+                    <xs:element name="RazonSocialEmisor" type="xs:string"/>
+                    <xs:element name="NombreComercial" type="xs:string"/>
+                    <xs:element name="DireccionEmisor" type="xs:string"/>
+                    <xs:element name="FechaEmision" type="xs:date"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Comprador">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RNCComprador" type="xs:string"/>
+                    <xs:element name="RazonSocialComprador" type="xs:string"/>
+                    <xs:element name="ContactoComprador" type="xs:string"/>
+                    <xs:element name="CorreoComprador" type="xs:string"/>
+                    <xs:element name="DireccionComprador" type="xs:string"/>
+                    <xs:element name="MunicipioComprador" type="xs:string"/>
+                    <xs:element name="ProvinciaComprador" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetallesItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Item" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="NumeroLinea" type="xs:string"/>
+                    <xs:element name="IndicadorFacturacion" type="xs:string"/>
+                    <xs:element name="NombreItem" type="xs:string"/>
+                    <xs:element name="IndicadorBienoServicio" type="xs:string"/>
+                    <xs:element name="CantidadItem" type="xs:decimal"/>
+                    <xs:element name="UnidadMedida" type="xs:string"/>
+                    <xs:element name="PrecioUnitarioItem" type="xs:decimal"/>
+                    <xs:element name="MontoItem" type="xs:decimal"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
