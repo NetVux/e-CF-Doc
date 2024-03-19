@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://NETWUX/">Facturación Electrónica República Dominicana  / NETVUX </a> </h1>
+<h1 align="center"><a href="https://netvux.com/">Facturación Electrónica República Dominicana / NETVUX </a> </h1>
 
 ## Descripción de Ambientes: 
 Un ambiente es un contexto o entorno creado con la finalidad de definir el curso y
@@ -18,7 +18,7 @@ Este token es necesario enviarlo en lo adelante para realizar cualquier comunica
 
 ```python
 import requests
-url_val_semilla = "https://server_demo/TesteCF/api/Autenticacion"
+url_val_semilla = "https://sandbox.netvux.com/TesteCF/api/Autenticacion"
 
 headers_semilla = {
     'Authorization': 'Bearer {}'.format("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.njLWdDtB-uEBaz5iMqTYtGJ5iBfvkWOKKrEERAr1nwY"),
@@ -51,7 +51,7 @@ headers_semilla = {
     'Authorization': 'Bearer 03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156',
 }
 
-api_url = 'server_demo/TesteCF/api/ecf'
+api_url = 'https://sandbox.netvux.com/TesteCF/api/ecf'
 files = {
     'xml': (xmlname, xml, 'text/xml')
 }
@@ -89,7 +89,7 @@ headers_semilla = {
     'Authorization': 'Bearer 03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156',
 }
 
-api_url = 'server_demo/TesteCF/api/TrackId?TrackId=872537f2-14b4-4e19-9998-e5c0c45e70ae'
+api_url = 'https://sandbox.netvux.com/TesteCF/api/TrackId?TrackId=872537f2-14b4-4e19-9998-e5c0c45e70ae'
 response = requests.post(api_url, headers=headers_semilla)
 
 ```
@@ -112,7 +112,7 @@ data = {
     'ncfelectronico': 'E310000000084',
 }
 
-api_url = 'server_demo/TesteCF/api/consultaestado'
+api_url = 'https://sandbox.netvux.com/TesteCF/api/consultaestado'
 response = requests.post(api_url, headers=headers_semilla)
 
 ```
