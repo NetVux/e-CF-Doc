@@ -137,9 +137,12 @@ response = requests.post(api_url, headers=headers_semilla)
 ```
 
 ## Responses
-200: Exito en la creacion de un ecf
-400: Respuesta de error por validaciones
+200: Exito en la creacion de un ecf.
+
+400: Respuesta de error por validaciones.
+
 404: Respuesta de error debido a q no se he encontrado el recurso al que se intenta acceder.
+
 505: Respuesta de error debido a un error interno en el sistema.
 
 ### Reference
