@@ -10,7 +10,7 @@ puedan practicar y realizar pruebas de adecuación e integración de sus sistema
 
 ## Endpoints:
 
-**Autenticación**: Esta ruta recibe un nombre de usuario y una clave (encriptado en HS256) que identifican al usuario en NETVUX.
+**Autenticación**: Esta ruta recibe un nombre de usuario y un token que identifican al usuario en NETVUX.
 Si la información de usuario es correcta retorna un token de acceso asociado a una fecha de emisión y una fecha de expiración(5 minutos).
 Este token es necesario enviarlo en lo adelante para realizar cualquier comunicacion con NETVUX.
 
