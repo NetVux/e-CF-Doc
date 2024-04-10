@@ -13,7 +13,7 @@ Comprende la recepción, validación, asignación del consecutivo y la incorpora
 La verificación consiste en aplicar las reglas y validaciones vigentes por la DGII.
 
 Si el resultado de la verificación es satisfactorio, se procede a enviar a la DGII.
-Todo ECF aceptado es remitido al emisor y a la DGII inmediatamente.
+Todo ECF aceptado es remitido al emisor inmediatamente.
 
 
 ## Endpoints:
@@ -45,7 +45,7 @@ Retorna un objeto que contiene un string de autenticación (token) asociado a un
 {"token": "03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156", "issued": "2024-01-17 13:45:56", "expired": "24-50-17 13:50:56"}
 ```
 
-**Recepcion ECF**: Esta ruta recibe un token de acceso asociado a unarecibe
+**Recepcion ECF**: Esta ruta recibe un token de acceso asociado a una
 sesión válida y un xml simplificado con la estructura de la DGII.
 Si el documento es aceptado retorna un XML de la siguente forma.
 
