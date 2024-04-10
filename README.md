@@ -45,7 +45,7 @@ Retorna un objeto que contiene un string de autenticación (token) asociado a un
 {"token": "03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156", "issued": "2024-01-17 13:45:56", "expired": "24-50-17 13:50:56"}
 ```
 
-**Recepcion ECF**: Esta ruta recibe un token de acceso asociado a una
+**Recepcion ECF**: Esta ruta recibe un token de acceso asociado a unarecibe
 sesión válida y un xml simplificado con la estructura de la DGII.
 Si el documento es aceptado retorna un XML de la siguente forma.
 
@@ -102,7 +102,7 @@ response = requests.post(api_url, headers=headers_semilla)
 
 ```
 
-**Consulta Estado ECF**: Esta ruta recibe responsable de retornar el estado de procesamiento o validez del e‐CF
+**Consulta Estado ECF**: Esta ruta es responsable de retornar el estado de procesamiento o validez del e‐CF
 tentativo enviado exclusivamente mediante el servicio web de recepción de e‐CF.
 
 <h4>Example</h4>
