@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://netvux.com/">Facturación Electrónica en linea República Dominicana / NETVUX </a> </h1>
 
-## Descripción de Ambientes: 
+## Descripción de Ambientes
 Un ambiente es un contexto o entorno creado con la finalidad de definir el curso y
 funcionamiento de determinados servicios en cada uno de ellos, en NETVUX se estarán utilizando dos (2) ambientes:
 
@@ -8,7 +8,7 @@ funcionamiento de determinados servicios en cada uno de ellos, en NETVUX se esta
 puedan practicar y realizar pruebas de adecuación e integración de sus sistemas, almacenando los envíos por un periodo de 60 días. No tiene validez fiscal.
 - Producción: ambiente productivo donde todo envío y operación tiene validez fiscal.
 
-## Recepción del ECF:
+## Recepción del ECF
 Comprende la recepción, validación, asignación del consecutivo y la incorporación de la firma electrónica.
 La verificación consiste en aplicar las reglas y validaciones vigentes por la DGII.
 
