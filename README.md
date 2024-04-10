@@ -29,7 +29,7 @@ import requests
 url_val_semilla = "https://sandbox.netvux.com/TesteCF/api/Autenticacion"
 
 headers_semilla = {
-    'Authorization': 'Bearer {}'.format("e4b3e67a728c408da7caea17e80355c51856ea1c--"),
+    'Authorization': 'Bearer {}'.format("0f9a2d4d7ff04516d66c4aa7e1d438173b4fea15"),
 }
 
 data = {
