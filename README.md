@@ -67,7 +67,7 @@ response = requests.post(api_url, headers=headers_semilla, files=files)
 
 ```
 
-Retorna el estado del documento, consecutivo, mensaje de la DGII, Codigo de seguridad y la fecha de firma:
+Si el resultado de la verificación es satisfactorio, retorna el estado del documento, consecutivo, mensaje de la DGII, Codigo de seguridad y la fecha de firma:
 
 ```xml
 <MensajeEnviado>
@@ -80,6 +80,15 @@ Mensajes: {"Mensaje": {"Valor": null, "Codigo": "0"}}</message_detail_dgii>
     <security_code>aHRGQk</security_code>
     <sign_date>17-01-2024 15:09:37</sign_date>    
     <trackId>872537f2-14b4-4e19-9998-e5c0c45e70ae</trackId>
+</MensajeEnviado>
+```
+
+Si existen errores retorna un codigo interno y la descripción del error:
+
+```xml
+<MessageError>
+    <valor>89</encf>
+    <description>Error de validación</description>    
 </MensajeEnviado>
 ```
 
