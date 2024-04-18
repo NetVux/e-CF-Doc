@@ -13,7 +13,8 @@
         </Emisor>
     </Encabezado>
     <DetallesItems>
-        <Item>            
+        <Item>
+            <NumeroLinea>1</NumeroLinea>            
             <IndicadorFacturacion>4</IndicadorFacturacion>
             <NombreItem>Peajes viaje semana I</NombreItem>
             <IndicadorBienoServicio>2</IndicadorBienoServicio>

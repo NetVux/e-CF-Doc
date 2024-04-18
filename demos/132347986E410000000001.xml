@@ -29,7 +29,8 @@
         </Comprador>        
     </Encabezado>
     <DetallesItems>
-        <Item>            
+        <Item>
+            <NumeroLinea>1</NumeroLinea>            
             <IndicadorFacturacion>1</IndicadorFacturacion>
             <Retencion>
                 <IndicadorAgenteRetencionoPercepcion>1</IndicadorAgenteRetencionoPercepcion>
