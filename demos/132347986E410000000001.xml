@@ -4,13 +4,7 @@
         <IdDoc>
             <TipoeCF>41</TipoeCF>
             <IndicadorMontoGravado>0</IndicadorMontoGravado>
-            <TipoPago>1</TipoPago>
-            <TablaFormasPago>
-                <FormaDePago>
-                    <FormaPago>1</FormaPago>
-                    <MontoPago>9000.00</MontoPago>
-                </FormaDePago>
-            </TablaFormasPago>
+            <TipoPago>1</TipoPago>            
         </IdDoc>
         <Emisor>
             <RNCEmisor>132347986</RNCEmisor>
