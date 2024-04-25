@@ -3,6 +3,8 @@
         <Version>1.0</Version>
         <IdDoc>
             <TipoeCF>43</TipoeCF>
+            <eNCF>E430000000001</eNCF>
+            <FechaVencimientoSecuencia>31-12-2025</FechaVencimientoSecuencia>
         </IdDoc>
         <Emisor>
             <RNCEmisor>132347986</RNCEmisor>

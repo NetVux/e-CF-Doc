@@ -3,6 +3,8 @@
         <Version>1.0</Version>
         <IdDoc>
             <TipoeCF>41</TipoeCF>
+            <eNCF>E410000000001</eNCF>
+            <FechaVencimientoSecuencia>31-12-2025</FechaVencimientoSecuencia>
             <IndicadorMontoGravado>0</IndicadorMontoGravado>
             <TipoPago>1</TipoPago>            
         </IdDoc>
