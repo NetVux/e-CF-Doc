@@ -9,7 +9,7 @@ puedan practicar y realizar pruebas de adecuación e integración de sus sistema
 - Producción: ambiente productivo donde todo envío y operación tiene validez fiscal.
 
 ## Recepción del ECF
-Comprende la recepción, validación, asignación del consecutivo y la incorporación de la firma electrónica.
+Comprende la recepción, validación y la incorporación de la firma electrónica.
 La verificación consiste en aplicar las reglas y validaciones vigentes por la DGII.
 
 Si el resultado de la verificación es satisfactorio, se procede a enviar a la DGII.
