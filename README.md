@@ -153,6 +153,37 @@ response = requests.post(api_url, headers=headers_semilla)
 }
 ```
 
+**Recepcion AECF**: Esta ruta recibe un token de acceso asociado a una
+sesión válida y un xml de Aprobación Comercial (ACECF). 
+
+<h4>Example</h4>
+
+```xml
+<ACECF>
+    <DetalleAprobacionComercial>
+        <Version>1.0</Version>
+        <RNCEmisor>XXXX</RNCEmisor>
+        <eNCF>E310000001022</eNCF>
+        <FechaEmision>22-09-2024</FechaEmision>
+        <MontoTotal>118.00</MontoTotal>
+        <RNCComprador>XXXX</RNCComprador>
+        <Estado>1</Estado>
+        <FechaHoraAprobacionComercial>22-09-2024 08:30:34</FechaHoraAprobacionComercial>
+    </DetalleAprobacionComercial>
+</ACECF>
+```
+
+Retorna un xml con la respuesta de la DGII.
+
+```xml
+<MensajeEnviado>
+    <estado>accepted</encf>
+    <mensaje>Codigo: 01
+Estado: Aprobacion Comercial Aprobada.
+Mensajes: null</mensaje>    
+</MensajeEnviado>
+```
+
 ## Responses
 200: Exito en la creacion de un ecf.
 
