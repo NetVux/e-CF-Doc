@@ -153,7 +153,7 @@ response = requests.post(api_url, headers=headers_semilla)
 }
 ```
 
-**Recepcion AECF**: Esta ruta recibe un token de acceso asociado a una
+**Recepcion ACECF**: Esta ruta recibe un token de acceso asociado a una
 sesión válida y un xml de Aprobación Comercial (ACECF). 
 
 <h4>Example</h4>
