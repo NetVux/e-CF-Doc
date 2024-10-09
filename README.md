@@ -16,7 +16,7 @@ https://sandbox.netvux.com/TesteCF/api/Nombredelservicio
 
 eCF: Ambiente de producción, ejemplo:
 
-https://sandbox.netvux.com/eCF/api/Nombredelservicio
+https://ecf.netvux.com/eCF/api/Nombredelservicio
 
 
 
