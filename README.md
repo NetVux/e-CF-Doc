@@ -8,6 +8,16 @@ funcionamiento de determinados servicios en cada uno de ellos, en NETVUX se esta
 puedan practicar y realizar pruebas de adecuación e integración de sus sistemas, almacenando los envíos por un periodo de 60 días. No tiene validez fiscal.
 - Producción: ambiente productivo donde todo envío y operación tiene validez fiscal.
 
+A continuación, podrán identificar la estructura definida para la comunicación o invocación de los servicios de facturación electrónica según el ambiente:
+
+TesteCF: Ambiente de pre-certificación, ejemplo:
+https://sandbox.netvux.com/TesteCF/api/Nombredelservicio
+
+eCF: Ambiente de producción, ejemplo:
+https://sandbox.netvux.com/eCF/api/Nombredelservicio
+
+
+
 ## Recepción del ECF
 Comprende la recepción, validación y la incorporación de la firma electrónica.
 La verificación consiste en aplicar las reglas y validaciones vigentes por la DGII.
@@ -19,7 +29,7 @@ Todo ECF aceptado es remitido al emisor inmediatamente.
 ## Endpoints:
 
 **Autenticación**: Esta ruta recibe un nombre de usuario y un token que identifican al usuario en NETVUX.
-Si la información de usuario es correcta retorna un token de acceso asociado a una fecha de emisión y una fecha de expiración(5 minutos).
+Si la información de usuario es correcta retorna un token de acceso asociado a una fecha de emisión y una fecha de expiración(1 hora).
 Este token es necesario enviarlo en lo adelante para realizar cualquier comunicacion con NETVUX.
 
 <h4>Example</h4>
@@ -71,6 +81,7 @@ Si el resultado de la verificación es satisfactorio, retorna el estado del docu
 
 ```xml
 <MensajeEnviado>
+    <rncemisor>XXXX</rncemisor>
     <encf>E310000000084</encf>
     <message_detail_dgii>TrackId: 064b3a97-be47-455c-96ad-82c412362fa8
 Codigo: 1
@@ -177,7 +188,8 @@ Retorna un xml con la respuesta de la DGII.
 
 ```xml
 <MensajeEnviado>
-    <estado>accepted</encf>
+    <encf>E310000002743</encf>
+    <estado>accepted</estado>
     <mensaje>Codigo: 01
 Estado: Aprobacion Comercial Aprobada.
 Mensajes: null</mensaje>    
