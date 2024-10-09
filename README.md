@@ -11,9 +11,11 @@ puedan practicar y realizar pruebas de adecuación e integración de sus sistema
 A continuación, podrán identificar la estructura definida para la comunicación o invocación de los servicios de facturación electrónica según el ambiente:
 
 TesteCF: Ambiente de pre-certificación, ejemplo:
+
 https://sandbox.netvux.com/TesteCF/api/Nombredelservicio
 
 eCF: Ambiente de producción, ejemplo:
+
 https://sandbox.netvux.com/eCF/api/Nombredelservicio
 
 
