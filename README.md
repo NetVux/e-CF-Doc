@@ -198,6 +198,48 @@ Mensajes: null</mensaje>
 </MensajeEnviado>
 ```
 
+**Anulación Rango**: Esta ruta recibe un token de acceso asociado a una
+sesión válida y un xml de Anulación de Rangos (ACECF). 
+
+<h4>Example</h4>
+
+```xml
+<ANECF>
+    <Encabezado>
+        <Version>1.0</Version>
+        <RncEmisor>XXXX</RncEmisor>
+        <CantidadeNCFAnulados>1</CantidadeNCFAnulados>
+        <FechaHoraAnulacioneNCF>22-09-2024</FechaHoraAnulacioneNCF>        
+    </Encabezado>
+    <DetalleAnulacion>
+        <Anulacion>
+            <NoLinea>1</NoLinea>
+            <TipoeCF>31</TipoeCF>
+            <TablaRangoSecuenciasAnuladaseNCF>
+                <Secuencias>
+                    <SecuenciaeNCFDesde>E310000030011</SecuenciaeNCFDesde>
+                    <SecuenciaeNCFHasta>E310000030011</SecuenciaeNCFHasta>
+                </Secuencias>
+            </TablaRangoSecuenciasAnuladaseNCF>
+            <CantidadeNCFAnulados>1</CantidadeNCFAnulados>
+        </Anulacion>
+    </DetalleAnulacion>
+</ANECF>
+```
+
+Retorna un xml con la respuesta de la DGII.
+
+```xml
+<MensajeEnviado>
+    <rncemisor>XXXX</rncemisor>
+    <mensaje>rnc: XXXX
+    codigo: 15
+    nombre: Satisfactorio
+    mensajes: Las secuencias fueron anuladas correctamente.
+    </mensaje>    
+</MensajeEnviado>
+```
+
 ## Responses
 200: Exito en la creacion de un ecf.
 
