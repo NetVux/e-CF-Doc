@@ -30,9 +30,9 @@ Todo ECF aceptado es remitido al emisor inmediatamente.
 
 ## Endpoints:
 
-**Autenticación**: Esta ruta recibe un nombre de usuario y un token que identifican al usuario en NETVUX.
+**Autenticación**: Esta ruta recibe un nombre de usuario, RNC(Opcional para el caso de multicompañias) y un token que identifican al usuario en NETVUX.
 Si la información de usuario es correcta retorna un token de acceso asociado a una fecha de emisión y una fecha de expiración(1 hora).
-Este token es necesario enviarlo en lo adelante para realizar cualquier comunicacion con NETVUX.
+Este token es necesario enviarlo en lo adelante para realizar cualquier comunicación con NETVUX.
 
 <h4>Example</h4>
 
@@ -46,6 +46,7 @@ headers_semilla = {
 
 data = {
     'user': 'demo',
+    'rnc': 'XXX',
 }
 
 response = requests.post(url_val_semilla, headers=headers_semilla, data=data)
