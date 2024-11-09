@@ -12,11 +12,11 @@ A continuación, podrán identificar la estructura definida para la comunicació
 
 TesteCF: Ambiente de pre-certificación, ejemplo:
 
-https://sandbox.netvux.com/TesteCF/api/Nombredelservicio
+https://sandbox.netvux.com/api/Nombredelservicio
 
 eCF: Ambiente de producción, ejemplo:
 
-https://ecf.netvux.com/eCF/api/Nombredelservicio
+https://ecf.netvux.com/api/Nombredelservicio
 
 
 
@@ -38,7 +38,7 @@ Este token es necesario enviarlo en lo adelante para realizar cualquier comunica
 
 ```python
 import requests
-url_val_semilla = "https://sandbox.netvux.com/TesteCF/api/Autenticacion"
+url_val_semilla = "https://sandbox.netvux.com/api/Autenticacion"
 
 headers_semilla = {
     'Authorization': 'Bearer {}'.format("0f9a2d4d7ff04516d66c4aa7e1d438173b4fea15"),
@@ -72,7 +72,7 @@ headers_semilla = {
     'Authorization': 'Bearer 03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156',
 }
 
-api_url = 'https://sandbox.netvux.com/TesteCF/api/ecf'
+api_url = 'https://sandbox.netvux.com/api/ecf'
 files = {
     'xml': (xmlname, xml, 'text/xml')
 }
@@ -120,7 +120,7 @@ headers_semilla = {
     'Authorization': 'Bearer 03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156',
 }
 
-api_url = 'https://sandbox.netvux.com/TesteCF/api/TrackId?TrackId=872537f2-14b4-4e19-9998-e5c0c45e70ae'
+api_url = 'https://sandbox.netvux.com/api/TrackId?TrackId=872537f2-14b4-4e19-9998-e5c0c45e70ae'
 response = requests.post(api_url, headers=headers_semilla)
 
 ```
