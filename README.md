@@ -107,7 +107,7 @@ Si existen errores retorna un codigo interno y la descripción del error:
 ```
 
 **Consulta XML**: Esta ruta recibe un token de acceso asociado a una
-sesión válida y una trackId. Retorna un xml firmado
+sesión válida y un trackId. Retorna un xml firmado
 y con la estructura completa de la DGII.
 
 <h4>Example</h4>
@@ -120,7 +120,7 @@ headers_semilla = {
     'Authorization': 'Bearer 03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156',
 }
 
-api_url = 'https://sandbox.netvux.com/api/TrackId?TrackId=872537f2-14b4-4e19-9998-e5c0c45e70ae'
+api_url = 'https://sandbox.netvux.com/api/TrackId?TrackId=E310000000084'
 response = requests.post(api_url, headers=headers_semilla)
 
 ```
