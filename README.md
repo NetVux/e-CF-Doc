@@ -72,7 +72,7 @@ headers_semilla = {
     'Authorization': 'Bearer 03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156',
 }
 
-api_url = 'https://sandbox.netvux.com/api/ecf'
+api_url = 'https://sandbox.netvux.com/v2/api/ecf'
 files = {
     'xml': (xmlname, xml, 'text/xml')
 }
@@ -107,7 +107,7 @@ Si existen errores retorna un codigo interno y la descripción del error:
 ```
 
 **Consulta XML**: Esta ruta recibe un token de acceso asociado a una
-sesión válida y un trackId. Retorna un xml firmado
+sesión válida y un numero ecf. Retorna un xml firmado
 y con la estructura completa de la DGII.
 
 <h4>Example</h4>
@@ -126,7 +126,7 @@ response = requests.post(api_url, headers=headers_semilla)
 ```
 
 **Consulta Estado ECF**: Esta ruta es responsable de retornar el estado de procesamiento o validez del e‐CF
-tentativo enviado exclusivamente mediante el servicio web de recepción de e‐CF.
+previamente enviado exclusivamente mediante el servicio web de recepción de e‐CF.
 
 <h4>Example</h4>
 

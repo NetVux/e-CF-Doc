@@ -34,6 +34,14 @@
          <MunicipioComprador>010100</MunicipioComprador>
          <ProvinciaComprador>010000</ProvinciaComprador>
       </Comprador>
+      <Totales>
+         <MontoGravadoTotal>6000.00</MontoGravadoTotal>
+         <MontoGravadoI1>6000.00</MontoGravadoI1>
+         <ITBIS1>18</ITBIS1>
+         <TotalITBIS>1080.00</TotalITBIS>
+         <TotalITBIS1>1080.00</TotalITBIS1>
+         <MontoTotal>7080.00</MontoTotal>
+      </Totales>
    </Encabezado>
    <DetallesItems>
       <Item>

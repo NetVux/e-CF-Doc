@@ -35,6 +35,21 @@
          <MunicipioComprador>010100</MunicipioComprador>
          <ProvinciaComprador>010000</ProvinciaComprador>
       </Comprador>
+      <Totales>
+         <MontoGravadoTotal>3230.00</MontoGravadoTotal>
+         <MontoGravadoI1>3230.00</MontoGravadoI1>
+         <MontoGravadoI2>0.00</MontoGravadoI2>
+         <MontoGravadoI3>0.00</MontoGravadoI3>
+         <MontoExento>0.00</MontoExento>
+         <ITBIS1>18</ITBIS1>
+         <ITBIS2>0</ITBIS2>
+         <ITBIS3>0</ITBIS3>
+         <TotalITBIS>581.40</TotalITBIS>
+         <TotalITBIS1>581.40</TotalITBIS1>
+         <TotalITBIS2>0.00</TotalITBIS2>
+         <TotalITBIS3>0.00</TotalITBIS3>
+         <MontoTotal>3811.40</MontoTotal>
+      </Totales>
    </Encabezado>
    <DetallesItems>
       <Item>
