@@ -58,8 +58,10 @@ Retorna un objeto que contiene un string de autenticación (token) asociado a un
 {"token": "03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156", "issued": "2024-01-17 13:45:56", "expired": "24-50-17 13:50:56"}
 ```
 
+## XML
+
 **Recepcion ECF**: Esta ruta recibe un token de acceso asociado a una
-sesión válida y un xml simplificado con la estructura de la DGII.
+sesión válida y un xml con la estructura de la DGII.
 Si el documento es aceptado retorna un XML de la siguente forma.
 
 <h4>Example</h4>
@@ -123,6 +125,56 @@ headers_semilla = {
 api_url = 'https://sandbox.netvux.com/api/TrackId?TrackId=E310000000084'
 response = requests.post(api_url, headers=headers_semilla)
 
+```
+
+## JSON
+
+**Recepcion ECF**: Esta ruta recibe un token de acceso asociado a una
+sesión válida y un json con la estructura de la DGII.
+Si el documento es aceptado retorna un XML de la siguente forma.
+
+<h4>Example</h4>
+
+```python
+import requests
+
+headers_semilla = {
+    "accept": 'application/json',
+    'Authorization': 'Bearer 03a4a99c01db7a494e12fe4ba7f9af2995a63feco1737035156',
+}
+
+api_url = 'https://sandbox.netvux.com/v2/api/ecf'
+files = {
+    'json': (jsonname, json, 'application/json')
+}
+response = requests.post(api_url, headers=headers_semilla, files=files)
+
+```
+
+Si el resultado de la verificación es satisfactorio, retorna el estado del documento, consecutivo, mensaje de la DGII, Codigo de seguridad y la fecha de firma:
+
+```json
+{
+    "rncemisor": "1234",
+    "encf": "E310000003882",
+    "message_detail_dgii": "Este comprobante fue aceptado en el ambiente de pruebas, por lo cual no tiene validez para fines tributarios.\n\nTrackId: f711d0f6-b908-4329-ade2-a1c0659d094d\nCodigo: 2\nEstado: Rechazado\nMensajes: {\"Mensaje\": {\"Valor\": \"Este número de secuencia ya ha sido utilizado.\", \"Codigo\": \"1209\"}}",
+    "estado": "delivered_refused",
+    "security_code": "CGWD9q",
+    "sign_date": "15-03-2025 19:40:41",
+    "trackId": "f711d0f6-b908-4329-ade2-a1c0659d094d",
+    "electronic_stamp": "https://ecf.dgii.gov.do/TesteCF/ConsultaTimbre?RncEmisor=1234&RncComprador=132449462&ENCF=E310000003882&FechaEmision=06-03-2025&MontoTotal=1.42&FechaFirma=15-03-2025+19%3A40%3A41&CodigoSeguridad=CGWD9q",
+    "pdf": null
+}
+```
+
+Si existen errores retorna un codigo interno y la descripción del error:
+
+```json
+{
+    "valor": "89",
+    "rncemisor": 1234,
+    "description": "Tipo de comprobante electr\ónico no encontrado"
+}
 ```
 
 **Consulta Estado ECF**: Esta ruta es responsable de retornar el estado de procesamiento o validez del e‐CF
