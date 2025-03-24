@@ -163,6 +163,7 @@ Si el resultado de la verificación es satisfactorio, retorna el estado del docu
     "sign_date": "15-03-2025 19:40:41",
     "trackId": "f711d0f6-b908-4329-ade2-a1c0659d094d",
     "electronic_stamp": "https://ecf.dgii.gov.do/TesteCF/ConsultaTimbre?RncEmisor=1234&RncComprador=132449462&ENCF=E310000003882&FechaEmision=06-03-2025&MontoTotal=1.42&FechaFirma=15-03-2025+19%3A40%3A41&CodigoSeguridad=CGWD9q",
+    "xml_link": "http://localhost:8069/api/shared/xml/?access_token=eeab8dab421fc737fc8531ac20e79332bce590bfo1774373562&amount=1.42&ENCF=E310000002884&RncEmisor=132347986"
     "pdf": null
 }
 ```
