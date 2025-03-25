@@ -1,0 +1,39 @@
+{
+    "id": "netvux-env-sandbox",
+    "name": "SandBox-NetVux",
+    "values": [
+        {
+            "key": "token",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "key": "issued",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "key": "expired",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "key": "user",
+            "value": "demo",
+            "enabled": true
+        },
+        {
+            "key": "rnc",
+            "value": "130000000",
+            "enabled": true
+        },
+        {
+            "key": "auth_key",
+            "value": "88800000000000000000000000000000000",
+            "enabled": true
+        }
+    ],
+    "_postman_variable_scope": "environment",
+    "_postman_exported_at": "2025-03-25T00:00:00Z",
+    "_postman_exported_using": "Postman"
+}

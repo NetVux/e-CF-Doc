@@ -1,0 +1,208 @@
+{
+    "info": {
+        "name": "NETVUX e-CF API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "exec": [
+                    "const moment = require('moment');",
+                    "const now = moment();",
+                    "const token = pm.environment.get('token');",
+                    "const expired = pm.environment.get('expired');",
+                    "const user = pm.environment.get('user');",
+                    "const rnc = pm.environment.get('rnc');",
+                    "const auth_key = pm.environment.get('auth_key');",
+                    "",
+                    "// Validar si el token est\u00e1 vac\u00edo o expirado",
+                    "if (!token || !expired || moment(expired, 'YYYY-MM-DD HH:mm:ss').isBefore(now)) {",
+                    "    console.log('Token vac\u00edo o expirado, solicitando nuevo token...');",
+                    "    pm.sendRequest({",
+                    "        url: 'https://sandbox.netvux.com/api/Autenticacion',",
+                    "        method: 'POST',",
+                    "        header: { 'Authorization': 'Bearer ' + auth_key },",
+                    "        body: {",
+                    "            mode: 'formdata',",
+                    "            formdata: [",
+                    "                { key: 'user', value: user, type: 'text' },",
+                    "                { key: 'rnc', value: rnc, type: 'text' }",
+                    "            ]",
+                    "        }",
+                    "    }, function (err, res) {",
+                    "        if (!err && res.code === 200) {",
+                    "            const data = res.json();",
+                    "            pm.environment.set('token', data.token);",
+                    "            pm.environment.set('issued', data.issued);",
+                    "            pm.environment.set('expired', data.expired);",
+                    "            console.log('Nuevo token obtenido:', data.token);",
+                    "        } else {",
+                    "            console.error('Error al autenticar:', err);",
+                    "        }",
+                    "    });",
+                    "} else {",
+                    "    console.log('Token v\u00e1lido. No es necesario renovar.');",
+                    "}"
+                ],
+                "type": "text/javascript"
+            }
+        }
+    ],
+    "item": [
+        {
+            "name": "Recepci\u00f3n ECF (XML)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "accept",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ],
+                "url": {
+                    "raw": "https://sandbox.netvux.com/v2/api/ecf",
+                    "protocol": "https",
+                    "host": [
+                        "sandbox",
+                        "netvux",
+                        "com"
+                    ],
+                    "path": [
+                        "v2",
+                        "api",
+                        "ecf"
+                    ]
+                },
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "xml",
+                            "type": "file",
+                            "src": ""
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Consulta XML",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "accept",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ],
+                "url": {
+                    "raw": "https://sandbox.netvux.com/api/TrackId?TrackId=E310000000084",
+                    "protocol": "https",
+                    "host": [
+                        "sandbox",
+                        "netvux",
+                        "com"
+                    ],
+                    "path": [
+                        "api",
+                        "TrackId"
+                    ],
+                    "query": [
+                        {
+                            "key": "TrackId",
+                            "value": "E310000000084"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Recepci\u00f3n ECF (JSON)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "accept",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ],
+                "url": {
+                    "raw": "https://sandbox.netvux.com/v2/api/ecf",
+                    "protocol": "https",
+                    "host": [
+                        "sandbox",
+                        "netvux",
+                        "com"
+                    ],
+                    "path": [
+                        "v2",
+                        "api",
+                        "ecf"
+                    ]
+                },
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "json",
+                            "type": "file",
+                            "src": ""
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Consulta Estado ECF",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "accept",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ],
+                "url": {
+                    "raw": "https://sandbox.netvux.com/TesteCF/api/consultaestado",
+                    "protocol": "https",
+                    "host": [
+                        "sandbox",
+                        "netvux",
+                        "com"
+                    ],
+                    "path": [
+                        "TesteCF",
+                        "api",
+                        "consultaestado"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"rncemisor\": \"1234\", \"ncfelectronico\": \"E310000000084\"}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
